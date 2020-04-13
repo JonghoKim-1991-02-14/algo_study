@@ -6,19 +6,19 @@ const size_t BUFFSIZE = 1000;
 
 // Returns length of the shortest path between v1 and v2.
 // If an error occurs, negative number will be returned
-int bfs(const struct graph g, const vertex v1, const vertex v2) {
+int bfs(const struct graph g, const vertex_t v1, const vertex_t v2) {
 
-   vertex discovered[BUFFSIZE]; // queue of vertices
-   vertex buff[BUFFSIZE];
+   vertex_t discovered[BUFFSIZE]; // queue of vertices
+   vertex_t buff[BUFFSIZE];
    int    visited[BUFFSIZE];   // key: vertex, value: whether visited (boolean)
-   vertex u, w;
+   vertex_t u, w;
    int num_neighbor;
    int d_start, d_end, v_start, v_end;
    int depth;
    int i, j, k;
 
-   memcpy(discovered, 0, BUFFSIZE * sizeof(vertex));
-   memcpy(visited, 0, BUFFSIZE * sizeof(int));
+   memset(discovered, 0, BUFFSIZE * sizeof(vertex_t));
+   memset(visited, 0, BUFFSIZE * sizeof(int));
 
    d_start = 0;
    d_end   = 0;
@@ -43,7 +43,7 @@ int bfs(const struct graph g, const vertex v1, const vertex v2) {
 
 	       for(j=v_start; j<=v_end; j++) {
 
-	          memcpy(buff, 0, BUFFSIZE * sizeof(vertex));
+	          memset(buff, 0, BUFFSIZE * sizeof(vertex_t));
 	          num_neighbor = find_neighbor(g, u, buff);
 
 	          for(k=0; k<num_neighbor; k++) {

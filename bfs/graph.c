@@ -2,24 +2,24 @@
 #include "graph.h"
 #include <string.h>   // C standard library
 
-int find_neighbor(const struct graph g, const vertex v, vertex *result) {
+int find_neighbor(const struct graph g, const vertex_t v, vertex_t *result) {
 
    int i;
-   vertex u;
-   int result;
+   vertex_t u;
+   int num_neighbor;
 
-   result = -1;
+   num_neighbor = -1;
 
    for(i=0; i<g.num_edge_list; i++) {
 
       u = g.e[i].src;
       if(u == v) {
 
-        memcpy(result, g.e[i].dest, sizeof(vertex) * g.e[i].num_dest);
-        result = g.e[i].num_dest;
+        memcpy(result, g.e[i].dest, sizeof(vertex_t) * g.e[i].num_dest);
+        num_neighbor = g.e[i].num_dest;
         break;
       }
    }
 
-   return result;
+   return num_neighbor;
 }
