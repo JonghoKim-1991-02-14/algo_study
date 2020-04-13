@@ -1,3 +1,7 @@
 # Ignore dotfiles
 .*
 !.gitignore
+
+# Ingnore suffixes
+*.txt
+*.o
