@@ -5,3 +5,6 @@
 # Ingnore suffixes
 *.txt
 *.o
+
+# Ignore a.out
+a.out
