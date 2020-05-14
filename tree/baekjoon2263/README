@@ -1,0 +1,39 @@
+                                      README
+
+input1.txt and output1.txt is referenced from https://www.acmicpc.net/problem/2263
+
+  2                 in-order:     1 2 3
+ / \                post-order:   1 3 2
+1   3               pre-order:    2 1 3
+
+
+input2.txt and output2.txt are made by Jongho Kim
+
+   2                in-order:     1 2 4 3 5
+  / \               post-order:   1 4 5 3 2
+ /   \              pre-order:    2 1 3 4 5
+1     3          
+     / \
+    4   5
+
+
+input3.txt and output3.txt are made by Jongho Kim
+
+1                   in-order:     1 2 3 4
+ \                  post-order:   4 3 2 1
+  2                 pre-order:    1 2 3 4
+   \
+    3
+     \
+      4
+
+
+input4.txt and output4.txt are made by Jongho Kim
+
+      1             in-order:     4 3 2 1
+     /              post-order:   4 3 2 1
+    2               pre-order:    1 2 3 4
+   /
+  3
+ /
+4
